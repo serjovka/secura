@@ -1,6 +1,7 @@
 import './Rsa.css';
 import React, { Component } from 'react';
 import SlidingButton from './SlidingButton'
+import { motion } from "framer-motion"
 
 export default class Rsa extends React.Component {
     constructor(props) {
@@ -30,13 +31,24 @@ export default class Rsa extends React.Component {
 
     render() {
       return(
-        <div className='Rsa'>
+        <motion.div 
+            className='Rsa'
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            exit={{
+                opacity: 0, 
+                scale: 0.5,
+                transition: { duration: 0.5 }
+            }}
+            key = "RSA"
+        >
             <div className='ControlMenu'>
                 <SlidingButton buttonName = "←" buttonFunction = {this.decrementStage}></SlidingButton>
                 <SlidingButton buttonName = "→" buttonFunction = {this.incrementStage}></SlidingButton>
                 <p className='stage'> RSA. Этап {this.state.stageCounter}</p>
             </div>
-        </div>
+        </motion.div>
       );
     }
 }
