@@ -1,0 +1,45 @@
+.Description{
+    background: #EEEEEE;
+}
+.MainPage-header {
+    margin: 0 auto; /*центрируем ее*/
+    background: #1D1B26;
+    margin-bottom: 1%;
+    width: 100%;
+    display: flex;
+}
+
+.MainPageDescription{
+    margin: 10px 20px auto;
+    display: table;
+}
+.mainPagePhoto + .descriptionText{
+    display: table-cell;
+    padding-left: 40px;
+}
+.descriptionText{
+    vertical-align: middle;
+    font-size: 64px;
+    text-align: center;
+}
+.mainPagePhoto{
+    width: 60vmin;
+}
+@media (prefers-reduced-motion: no-preference){
+    .mainPagePhoto{
+        animation: App-logo-resize infinite 10s linear;
+    }
+}
+
+@keyframes App-logo-resize {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+

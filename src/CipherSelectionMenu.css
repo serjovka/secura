@@ -1,0 +1,24 @@
+.CipherSelection-header{
+    margin: 0 auto; /*центрируем ее*/
+    background: #1D1B26;
+    margin-bottom: 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SuggestionСhoosingCipher{
+    color: white;
+    font-size: 24px;
+}
+
+.Separator{
+    margin: 0px 0;
+	padding: 0;
+	height: 10px;
+	border: none;
+	background: linear-gradient(60deg, #ff3000, #ed0200, #ff096c, #d50082);
+}
