@@ -1,0 +1,71 @@
+.CCstage{
+    text-decoration: none;
+    outline: none;
+    color: white;
+    display: inline-block;
+    position: relative;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    border-image-slice: 1;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+    width: 100%;
+}
+.CaesarCipher{
+    background-color: white;
+    padding-top: 0px;
+}
+
+.CCControlMenu{
+    background: #1D1B26;
+    width: 100%;
+    display: flex;
+    padding-bottom: 0px;
+}
+
+.CCFunctionPanel, .CCFunctionPanel2{
+    background-color: #1D1B26;
+    min-height: 100vh;
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+}
+
+.InputField {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    position: relative;
+    padding: 15px 30px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    border-image-slice: 1;
+    margin: 10px 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+
+.MainCipherArea{
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
+.Step3{
+    width: 30%;
+}
+
+.Person{
+    height: 30vmin;
+}

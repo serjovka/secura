@@ -1,6 +1,6 @@
 import './Rsa.css';
 import React, { Component } from 'react';
-import SlidingButton from './SlidingButton'
+import SlidingButton from '../../button/SlidingButton'
 import { motion } from "framer-motion"
 
 export default class Rsa extends React.Component {

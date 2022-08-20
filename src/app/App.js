@@ -1,6 +1,6 @@
-import Description from './Description';
-import CipherSelectionMenu from './CipherSelectionMenu';
-import Visualizer from './Visualizer';
+import Description from '../desctiption/Description';
+import CipherSelectionMenu from '../cipher_selection_menu/CipherSelectionMenu';
+import Visualizer from '../cipher_selection_menu/Visualizer';
 import './App.css';
 import React from 'react';
 

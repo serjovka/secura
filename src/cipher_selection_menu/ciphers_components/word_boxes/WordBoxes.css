@@ -1,0 +1,6 @@
+.WordBoxes{
+    display: flex;
+    flex-direction: row;
+    background-color: #1D1B26;
+    margin: 0px 20px 15px 30px;
+}

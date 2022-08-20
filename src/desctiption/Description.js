@@ -1,6 +1,6 @@
-import SlidingButton from './SlidingButton';
+import SlidingButton from '../button/SlidingButton';
 import './Description.css';
-import secPhoto from './sec.png'
+import secPhoto from '../sec.png'
 
 function Description() {
     return (

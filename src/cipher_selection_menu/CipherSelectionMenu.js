@@ -1,7 +1,6 @@
 import './CipherSelectionMenu.css'
 import React, { Component } from 'react';
-import SlidingButton from './SlidingButton'
-import Visualizer from './Visualizer';
+import SlidingButton from '../button/SlidingButton'
 
 export default class CipherSelectionMenu extends React.Component {
 

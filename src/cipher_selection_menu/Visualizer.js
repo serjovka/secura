@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import CipherSelectionMenu from './CipherSelectionMenu';
-import Rsa from './Rsa';
+import CaesarsCipher from './ciphers_components/CaesarCipher';
+import Rsa from './ciphers_components/Rsa';
 
 export default class Visualizer extends React.Component {
 
@@ -16,6 +16,8 @@ export default class Visualizer extends React.Component {
                 return;
             case 1:
                 return(<Rsa/>);
+            case 3:
+                return(<CaesarsCipher/>)
         }
         
     }

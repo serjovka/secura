@@ -1,0 +1,43 @@
+.WordBox{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.Letter{
+    width: 2vw;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    color: white;
+    background-color: transparent;
+    display: flex;
+    padding: 3px 6px;
+    border: 1px solid;
+    border-image: linear-gradient(180deg, #ff3000, #ed0200, #ff096c, #d50082);
+    border-image-slice: 1;
+    margin-top: 0px;
+    margin-inline: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+
+.Numeric{
+    opacity: 0.5;
+    justify-content: center;
+    text-align: center;
+    width: 2vw;
+    color: white;
+    display: flex;
+    padding: 3px 6px;
+    margin-top: 0px;
+    margin-inline: 5px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .8s cubic-bezier(.165, .84, .44, 1);
+}

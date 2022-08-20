@@ -10,7 +10,7 @@ function SlidingButton(props){
                 scale: 1.2,
             }}
             whileTap={{ 
-                scale: 0.7,
+                scale: 0.8,
             }}
             transition={{ type: "spring", stiffness: 400, damping: 17}}
         >
