@@ -6,9 +6,8 @@ export default class CipherSelectionMenu extends React.Component {
 
     constructor(props) {
         super(props);
-        this.cipherCases = { Nothing: 0, RSA: 1, AES: 2, CaesarsCipher: 3};
-
-        this.chooseRSA = this.chooseRSA.bind(this);
+        this.cipherCases = { Nothing: 0, VigenereCipher: 1, AES: 2, CaesarsCipher: 3};
+        this.chooseVigenereCipher = this.chooseVigenereCipher.bind(this);
         this.chooseAES = this.chooseAES.bind(this);
         this.chooseCaesarsCipher = this.chooseCaesarsCipher.bind(this);
         this.chooseNothing = this.chooseNothing.bind(this);
@@ -18,8 +17,8 @@ export default class CipherSelectionMenu extends React.Component {
         this.props.updateData(this.cipherCases.AES)
     }
 
-    chooseRSA(){
-        this.props.updateData(this.cipherCases.RSA)
+    chooseVigenereCipher(){
+        this.props.updateData(this.cipherCases.VigenereCipher)
     }
 
     chooseCaesarsCipher(){
@@ -40,8 +39,8 @@ export default class CipherSelectionMenu extends React.Component {
                 </p>
                 <div className='CipherSelectionMenu'>
                     <SlidingButton 
-                        buttonName = "RSA" 
-                        buttonFunction = {this.chooseRSA}
+                        buttonName = "Vigenere cipher" 
+                        buttonFunction = {this.chooseVigenereCipher}
                     />
                     <SlidingButton 
                         buttonName = "AES"

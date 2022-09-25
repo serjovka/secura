@@ -2,8 +2,7 @@ import React, { useState } from 'react'
 import SlidingButton from '../../button/SlidingButton'
 import "./CaesarCipher.css"
 import WordBoxes from './word_boxes/WordBoxes'
-import person from "./person.png"
-import Slider from './Slider'
+import Slider from './slider/Slider'
 import { motion } from "framer-motion"
 
 
@@ -62,8 +61,6 @@ export default function CaesarsCipher() {
     decrementStage = decrementStage.bind(this);
     GetWordBoxes = GetWordBoxes.bind(this);
 
-    var minStage = 1;
-    var maxStage = 10;
 
     var stages = {
         "1": "Ввод данных",
@@ -197,11 +194,10 @@ export default function CaesarsCipher() {
 
     return(
         <motion.div 
-            className='CaesarCipher'
-            initial={{ opacity: 0, scale: 0.5 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-            key = "CaesarCipher"
+            className = 'CaesarCipher'
+            initial = {{ opacity: 0, scale: 0.5 }}
+            animate = {{ opacity: 1, scale: 1 }}
+            transition = {{ duration: 0.5 }}
         >
             <div className='CCControlMenu'>
                 <SlidingButton 
