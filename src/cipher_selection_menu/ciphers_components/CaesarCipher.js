@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 import SlidingButton from '../../button/SlidingButton'
 import "./CaesarCipher.css"
 import WordBoxes from './word_boxes/WordBoxes'
-import Slider from './slider/Slider'
 import { motion } from "framer-motion"
-
 
 function caesarCipherFunction(str, key) {
     
@@ -55,7 +53,6 @@ export default function CaesarsCipher() {
     const [stage, setStage] = useState(1);
     const [substep, setSubstep] = useState([0,0,0,0,0]);
     const [wordBoxes, setBoxes] = useState([]);
-    const [slider, setSlider] = useState(false);
 
     incrementStage = incrementStage.bind(this);
     decrementStage = decrementStage.bind(this);
@@ -70,15 +67,10 @@ export default function CaesarsCipher() {
         "5": "Вывод данных"
     }
 
-    function onComplete(position){
-        setSlider(true);
-    }
-
     function incrementStage(){
         var text = document.getElementById("input-text").value;
         var key = document.getElementById("input-key").value;
         var substepMax = [1, text.length, 1, text.length, 1]
-        console.log(stage, slider);
 
         if(stage == 1 && substep[0] <= substepMax[0] && text.length > 0 && key.length > 0){
             if (substep[0] == substepMax[0]){
@@ -106,16 +98,14 @@ export default function CaesarsCipher() {
             return;
         }
 
-        if(stage == 3 && slider == true){
+        if(stage == 3){
             if (substep[2] == substepMax[2]){
                 setStage(stage + 1);
-                setSlider(false);
                 return;
             }
             substep[2]++
             const newSubstep = {...substep};
             setSubstep(newSubstep);
-            setSlider(false);
             if (substep[2] == substepMax[2])
                 setStage(stage + 1);
             return;
@@ -137,8 +127,6 @@ export default function CaesarsCipher() {
 
     function decrementStage(){
         const newSubstep = {...substep};
-        console.log("substep:", substep)
-        console.log("slider:", slider)
 
         switch(stage){
             case 1:
@@ -165,15 +153,13 @@ export default function CaesarsCipher() {
                 setSubstep(newSubstep);
                 break;
             case 4:
-                if(slider == false){
-                    if (substep[3] == 0){
-                        setStage(stage - 1);
-                        return;
-                    }
-                    newSubstep[3]--;
-                    setSubstep(newSubstep);
-                    break;
+                if (substep[3] == 0){
+                    setStage(stage - 1);
+                    return;
                 }
+                newSubstep[3]--;
+                setSubstep(newSubstep);
+                break;
             case 5:
                 if (substep[4] == 0){
                     setStage(stage - 1);
@@ -231,14 +217,15 @@ export default function CaesarsCipher() {
                         <Step2 substep = {substep}/>
                     }                    
                 </div>
-                {stage == 3 &&
-                    <div className='Step3'> 
-                        <Slider 
-                            label="Slide to send message" 
-                            onConfirm = {onComplete} 
-                            setPosition = {slider}/>
-                    </div>
-                }
+                <div className='ccDescription'>
+                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Caesar3.svg/320px-Caesar3.svg.png'/>
+                    <p> Шифр Цезаря — это вид шифра подстановки, в котором каждый символ в открытом тексте заменяется символом, находящимся на некотором постоянном числе позиций левее или правее него в алфавите. Например, в шифре со сдвигом вправо на 3, А была бы заменена на Г, Б станет Д, и так далее </p>
+                    <p> Если сопоставить каждому символу алфавита его порядковый номер (нумеруя с 0), то шифрование и дешифрование можно выразить формулами модульной арифметики:</p>
+                    <img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/2417bfd08b8fa32adcabd255bb9a6b20832ca47f' />
+                    <br/>
+                    <img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/ec7a78025d3d44bece6d9880ad58ad131ac013fa' />
+                    <p>где x — символ открытого текста, y — символ шифрованного текста, n — мощность алфавита, а k — ключ.</p>
+                </div>
                 <div className='CCFunctionPanel2'>
                     {stage > 3 &&
                         <Step4 className = "Step4" substep = {substep}/>}      

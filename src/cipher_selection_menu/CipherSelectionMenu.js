@@ -35,23 +35,23 @@ export default class CipherSelectionMenu extends React.Component {
         <div className='visualization'>
             <div className='CipherSelection-header'>
                 <p className='SuggestionСhoosingCipher'>
-                    It's time to choose a cipher for visualization
+                    Выберите алгоритм шифрования:
                 </p>
                 <div className='CipherSelectionMenu'>
                     <SlidingButton 
-                        buttonName = "Vigenere cipher" 
+                        buttonName = "Шифр Виженера" 
                         buttonFunction = {this.chooseVigenereCipher}
                     />
                     <SlidingButton 
-                        buttonName = "AES"
+                        buttonName = "Шифр пар"
                         buttonFunction = {this.chooseAES}
                     />
                     <SlidingButton 
-                        buttonName = "Сaesar's cipher"
+                        buttonName = "Шифр Цезаря"
                         buttonFunction = {this.chooseCaesarsCipher}
                     />
                     <SlidingButton 
-                        buttonName = "Back"
+                        buttonName = "Назад"
                         buttonFunction = {this.chooseNothing}
                     />
                 </div>

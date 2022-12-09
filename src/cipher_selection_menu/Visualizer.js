@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import CaesarsCipher from './ciphers_components/CaesarCipher';
 import VigenereCipher from './ciphers_components/VigenereCipher';
-
+import PairCipher from "./ciphers_components/PairCipher"
 
 export default class Visualizer extends React.Component {
 
@@ -17,6 +17,8 @@ export default class Visualizer extends React.Component {
                 return;
             case 1:
                 return(<VigenereCipher/>)
+            case 2:
+                return(<PairCipher />)
             case 3:
                 return(<CaesarsCipher/>)
         }

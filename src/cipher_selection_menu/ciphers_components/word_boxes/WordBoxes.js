@@ -8,9 +8,13 @@ export default function WordBoxes(props){
     var result = []; 
 
     for(var k = 0; k < text.length; k++){
+        let charCode = text[k].charCodeAt();
+        if(text[k].charCodeAt() >= 97){
+            charCode -= 6;
+        }
         listOfElements.push({
             "word": text[k],
-            "numeric": text[k].charCodeAt()
+            "numeric": charCode,
             })
     }
 

@@ -1,0 +1,10 @@
+.cipherDescriptionPanel{
+    max-height: 750px;
+    width: 33%;
+    text-align: center;
+    overflow: auto;
+}
+
+.cipherDescriptionText{
+    font-size: 18;
+}

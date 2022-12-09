@@ -6,17 +6,17 @@ function Description() {
     return (
         <div className = 'Description'>
             <header className='MainPage-header'>
-                <SlidingButton buttonName = "Securo" buttonFunction = {
+                <SlidingButton buttonName = "Secura" buttonFunction = {
                     function(){
                         window.location.href = 'http://localhost:3000/undefined';
                     }
                 }/>
-                <SlidingButton buttonName = "About" buttonFunction = {
+                <SlidingButton buttonName = "О пограмме" buttonFunction = {
                     function(){
                         window.location.href = 'http://localhost:3000/undefined';
                     }
                 }/>
-                <SlidingButton buttonName = "Feedback" buttonFunction = {
+                <SlidingButton buttonName = "Обратная связь" buttonFunction = {
                     function(){
                         window.location.href = 'http://localhost:3000/undefined';
                     }
@@ -24,7 +24,7 @@ function Description() {
             </header>
             <div className='MainPageDescription'>
                 <img className='mainPagePhoto' src={secPhoto}/>
-                <p className='descriptionText'>Проект крутой получится, очень красивый на реакте делаем.</p>
+                <p className='descriptionText'>Данный сайт создан, чтобы помочь вам разобраться в том, как работают некоторые алгоритмы шифрования.</p>
             </div>
         </div>
     );

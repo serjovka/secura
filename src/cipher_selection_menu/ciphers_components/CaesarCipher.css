@@ -21,6 +21,15 @@
     padding-top: 0px;
 }
 
+.ccDescription{
+    width: 33%;
+    text-align: center;
+    max-height: 750px;
+    text-align: center;
+    overflow: auto;
+    font-size: 18;
+}
+
 .CCControlMenu{
     background: #1D1B26;
     width: 100%;
@@ -49,7 +58,7 @@
     margin: 10px 20px;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     overflow: hidden;
     letter-spacing: 2px;
     transition: .8s cubic-bezier(.165, .84, .44, 1);

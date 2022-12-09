@@ -20,7 +20,7 @@
     margin-top: 0px;
     margin-inline: 5px;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     overflow: hidden;
     letter-spacing: 2px;
     transition: .8s cubic-bezier(.165, .84, .44, 1);
@@ -37,7 +37,7 @@
     margin-top: 0px;
     margin-inline: 5px;
     font-family: 'Montserrat', sans-serif;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     overflow: hidden;
     transition: .8s cubic-bezier(.165, .84, .44, 1);
 }
